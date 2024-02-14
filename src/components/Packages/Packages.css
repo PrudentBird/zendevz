@@ -163,4 +163,8 @@
         flex-direction: column;
         gap: 1.5rem;
     }
+
+    .purchase_list_container {
+        width: unset;
+    }
 }

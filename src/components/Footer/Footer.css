@@ -1,9 +1,12 @@
+.footer-container {
+    background: #eee;
+}
+
 .footer-wrap {
     width: 100%;
     max-width: 1440px;
     margin: auto;
-    padding: 0 3.125rem;
-    
+    padding: 3.125rem 3.125rem 0;
 }
 
 .footer-start {
@@ -72,7 +75,7 @@
 
 @media screen and (max-width: 960px) {
     .footer-wrap {
-        padding: 0 1.563rem;
+        padding: 1.563rem 1.563rem 0;
     }
 
     .footer-start {
