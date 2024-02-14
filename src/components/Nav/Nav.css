@@ -5,7 +5,8 @@
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 999;
 }
@@ -13,7 +14,6 @@
 .navbar-container {
   display: flex;
   justify-content: space-between;
-  height: 80px;
 }
 
 .container {
@@ -74,6 +74,13 @@
 }
 
 @media screen and (max-width: 960px) {
+  .navbar {
+    height: 65px;
+  }
+  .container {
+    padding: 0 1.563rem;
+  }
+
   .NavbarItems {
     position: relative;
   }
@@ -87,14 +94,14 @@
     flex-direction: column;
     width: 100%;
     position: absolute;
-    top: 80px;
+    top: 65px;
     left: -100%;
     opacity: 1;
   }
 
   .nav-menu.active {
     padding: 0 5rem;
-    height: calc(100dvh - 80px);
+    height: calc(100dvh - 65px);
     display: flex;
     align-items: center;
     justify-content: center;

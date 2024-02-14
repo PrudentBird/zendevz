@@ -5,12 +5,14 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Nav from "./components/Nav/Nav";
 import './index.css';
+import Footer from "./components/Footer/Footer";
 
 const AppLayout = () => {
   return (
     <div>
       <Nav />
       <Outlet />
+      <Footer />
     </div>
   );
 };
