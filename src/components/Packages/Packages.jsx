@@ -20,7 +20,6 @@ const Packages = () => {
                 <h2
                   dangerouslySetInnerHTML={{ __html: packageData.title }}
                 ></h2>
-                <span>₦{packageData.price}</span>
                 <p>{packageData.description}</p>
               </div>
               <div className="purchase_list_line"></div>

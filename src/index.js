@@ -1,38 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Nav from "./components/Nav/Nav";
-import './index.css';
-import Footer from "./components/Footer/Footer";
+import NotFound from "./pages/NotFound";
+import "./index.css";
 
-const AppLayout = () => {
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
+const App = () => {
   return (
-    <div>
-      <Nav />
-      <Outlet />
-      <Footer />
-    </div>
+    <Router>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/reviews" element={<Home scrollToReviews={true} />} />
+        <Route path="/services" element={<Home scrollToServices={true} />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
   );
 };
 
-const router = createBrowserRouter([
-  {
-    element: <AppLayout />,
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "/about",
-        element: <About />,
-      },
-    ],
-  },
-]);
-
-createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
-);
+createRoot(document.getElementById("root")).render(<App />);

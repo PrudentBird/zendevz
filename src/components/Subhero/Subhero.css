@@ -1,151 +1,270 @@
 .subhero-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    max-width: 1440px;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    padding: 0 3.125rem 3.125rem;
-    gap: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 0 3.125rem 3.125rem;
+  gap: 2rem;
 }
 
 .subhero-content-wrap {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 .subhero-content {
-    width: 100%;
-    background: #183153;
-    padding: 3rem;
-    display: flex;
-    height: 31.25rem;
-    overflow: hidden;
+  width: 100%;
+  background: #183153;
+  padding: 3rem;
+  display: flex;
+  height: 31.25rem;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .subhero-content h3 {
-    color: #fff;
-    font-weight: 500;
+  color: #fff;
+  font-weight: 500;
 }
 
 .cont {
-    background: #eee;
-    overflow: hidden;
-    position: relative;
+  background: #eee;
+  overflow: hidden;
+  position: relative;
 }
 
 .cont h3 {
-    padding: 3rem 0 0;
-    color: #183153;
-    font-weight: 600;
-    font-size: 3rem;
-    line-height: 3rem;
+  padding: 3rem 0 0;
+  color: #183153;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 3rem;
 }
 
 .contimg-wrap {
-    z-index: 1;
-    overflow: visible;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
+  z-index: 1;
+  overflow: visible;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 .contimg-wrap img {
-    z-index: 1;
-    position: absolute;
-    border: 0;
-    margin: 0;
-    padding: 0;
-    top: -100px;
-    right: -850px;
-    -webkit-transform: translatex(-50%);
-    transform: translatex(-50%);
+  z-index: 1;
+  position: absolute;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  top: -100px;
+  right: -850px;
+  -webkit-transform: translatex(-50%);
+  transform: translatex(-50%);
+}
+
+.overlay {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background: #000000bb;
+  transition: 0.5s ease-in-out;
+}
+
+.subhero-content:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-text {
+  color: white;
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  padding: 0 5rem;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .conte {
-    background: #183153;
-    overflow: hidden;
-    position: relative;
-    justify-content: center;
-    align-items: center;
+  background: #183153;
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 .conte h3 {
-    color: #fff;
-    font-weight: 600;
-    font-size: 3rem;
-    line-height: 3rem;
-    text-align: center;
-    line-height: 3.5rem;
-    padding-bottom: 2rem;
+  color: #fff;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  line-height: 3.5rem;
+  padding-bottom: 2rem;
 }
 
 .conteimg-wrap {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .conteimg-wrap img {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .conten {
-    background: #183153;
-    overflow: hidden;
-    position: relative;
+  background: #183153;
+  overflow: hidden;
+  position: relative;
 }
 
 .conten h3 {
-    color: #fff;
-    font-weight: 600;
-    font-size: 3rem;
-    line-height: 3rem;
-    line-height: 3.5rem;
-    z-index: 1;
-    padding: 2rem 0 0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  z-index: 1;
+  padding: 2rem 0 0;
 }
 
 .contenimg-wrap {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .contenimg-wrap img {
-    width: 100%;
-    position: absolute;
-    bottom: -80px;
-    left: 80px;
+  width: 100%;
+  position: absolute;
+  bottom: -80px;
+  left: 80px;
 }
 
 .content {
-    background: #eee;
-    overflow: hidden;
-    position: relative;
-    justify-content: center;
+  background: #eee;
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
 }
 
 .content h3 {
-    color: #183153;
-    font-weight: 600;
-    font-size: 3rem;
-    line-height: 3rem;
-    text-align: center;
-    line-height: 2.5rem;
-    padding: 2rem 0 0;
+  color: #183153;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  line-height: 2.5rem;
+  padding: 2rem 0 0;
 }
 
 .contentimg-wrap {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .contentimg-wrap img {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
+@media screen and (max-width: 500px) {
+  .subhero-container {
+    padding: 0 1.563rem 3.125rem;
+  }
+
+  .subhero-content-wrap {
+    flex-direction: column;
+  }
+
+  .subhero-content {
+    height: 23.438rem;
+  }
+
+  .cont {
+    padding: 3rem 2rem;
+  }
+
+  .cont h3 {
+    font-size: 2.5rem;
+    padding: 0;
+  }
+
+  .contimg-wrap {
+    scale: 0.75;
+  }
+
+  .contimg-wrap img {
+    top: -115px;
+    right: -855px;
+    transform: translateX(-50%) rotate(15deg);
+  }
+
+  .conte {
+    padding: 0 2rem;
+  }
+
+  .conte h3 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .conteimg-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .conteimg-wrap img {
+    scale: 1.31;
+    bottom: unset;
+    left: unset;
+  }
+
+  .conten {
+    padding: 3rem 2rem;
+  }
+
+  .conten h3 {
+    padding: 0;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+
+  .contenimg-wrap img {
+    bottom: -90px;
+    left: 40px;
+    transform: rotate(15deg);
+  }
+
+  .content h3 {
+    font-size: 2.5rem;
+  }
+
+  .contentimg-wrap img {
+    bottom: 8px;
+    scale: 1.1;
+  }
+
+  .overlay-text {
+    padding: 0 2rem;
+  }
+
+  .reverse {
+      flex-direction: column-reverse;
+  }
+}
