@@ -1,16 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import "./Nav.css";
 
 const Nav = () => {
   const [click, setClick] = useState(false);
+  const [isScrolled, setisScrolled] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setisScrolled(window.scrollY > 0);
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div>
-      <nav className="navbar">
+      <nav className={`navbar ${isScrolled ? "navbar-scroll" : ""}`}>
         <div className="navbar-container container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
             ZenDevz

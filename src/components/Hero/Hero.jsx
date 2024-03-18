@@ -30,7 +30,7 @@ const Hero = () => {
           transition={bounceTransition}
           animate={{ y: [10, -10, 10] }}
         >
-          <img src={heroImg} alt="" />
+          <img src={heroImg} alt="" loading="lazy" />
         </motion.div>
       </div>
     </div>
