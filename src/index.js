@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import {
   BrowserRouter as Router,
-  Route,
   Routes,
+  Route,
   useLocation,
 } from "react-router-dom";
 import Home from "./pages/Home";
