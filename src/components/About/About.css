@@ -57,3 +57,22 @@
     font-size: 1.75rem;
     color: #183153;
 }
+
+@media screen and (max-width: 960px) {
+    .about-wrap {
+        padding: 125px 1.563rem 0;
+    }
+    .about-header-wrap {
+        gap: 1rem;
+        flex-direction: column;
+    }
+    .about-header {
+        width: 100%;
+    }
+    .about-header h3{
+        margin-bottom: 2rem;
+    }
+    .about-header-img-wrap img {
+        margin: 0;
+    }
+}
