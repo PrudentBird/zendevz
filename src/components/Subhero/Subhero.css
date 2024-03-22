@@ -191,6 +191,7 @@
 
   .subhero-content {
     height: 23.438rem;
+    padding: 1.5rem;
   }
 
   .cont {
@@ -254,6 +255,7 @@
 
   .content h3 {
     font-size: 2.5rem;
+    padding: 0;
   }
 
   .contentimg-wrap img {
