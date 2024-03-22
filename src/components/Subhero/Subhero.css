@@ -23,6 +23,7 @@
   padding: 3rem;
   display: flex;
   height: 31.25rem;
+  border-radius: 1rem;
   overflow: hidden;
   cursor: pointer;
 }
