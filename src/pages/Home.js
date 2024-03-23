@@ -12,16 +12,22 @@ const Home = ({ scrollToReviews, scrollToServices }) => {
   const servicesRef = useRef(null);
 
   useEffect(() => {
+    function scrollToElementWithOffset(element, offset) {
+      const rect = element.getBoundingClientRect();
+      const scrollTop =
+        document.body.scrollTop || document.documentElement.scrollTop;
+      const targetPosition = rect.top + scrollTop - offset;
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+      });
+    }
+
     if (scrollToReviews && reviewsRef.current) {
-      reviewsRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      scrollToElementWithOffset(reviewsRef.current, 80);
     } else if (scrollToServices && servicesRef.current) {
-      servicesRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      scrollToElementWithOffset(servicesRef.current, 80);
     }
   }, [scrollToReviews, scrollToServices]);
 

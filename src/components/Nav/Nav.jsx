@@ -63,6 +63,7 @@ const Nav = () => {
                 className={({ isActive }) =>
                   "nav-links" + (isActive ? " activated" : "")
                 }
+                onClick={closeMobileMenu}
               >
                 Contact
               </NavLink>
@@ -73,6 +74,7 @@ const Nav = () => {
                 className={({ isActive }) =>
                   "nav-links" + (isActive ? " activated" : "")
                 }
+                onClick={closeMobileMenu}
               >
                 Services
               </NavLink>
@@ -83,6 +85,7 @@ const Nav = () => {
                 className={({ isActive }) =>
                   "nav-links" + (isActive ? " activated" : "")
                 }
+                onClick={closeMobileMenu}
               >
                 Reviews
               </NavLink>
