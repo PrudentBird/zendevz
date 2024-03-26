@@ -33,8 +33,9 @@
     width: 100%;
     gap: 1rem;
     padding: 2rem;
-    background: #eee;
+    background: #183153;
     border-radius: 0.35rem;
+    color: #fff;
 }
 
 .reviews-container h4 {
@@ -45,7 +46,7 @@
 .reviews-container span {
     font-weight: 500;
     font-size: 1rem;
-    color: #444;
+    color: #eee;
 }
 
 @media screen and (max-width: 960px) {
