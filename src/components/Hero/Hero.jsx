@@ -2,8 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import "./Hero.css";
 import heroImg from "../../assets/hero.png";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleCta = () => {
+    navigate("/contact");
+  };
+
   const bounceTransition = {
     y: {
       duration: 4,
@@ -23,7 +30,9 @@ const Hero = () => {
             digital experiences to elevate businesses to new heights, with a
             blend of creativity and unwavering commitment.
           </p>
-          <button className="hero-cta">Get Started</button>
+          <button className="hero-cta" onClick={handleCta}>
+            Get Started
+          </button>
         </div>
         <motion.div
           className="hero-img"
