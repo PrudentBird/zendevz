@@ -1,11 +1,18 @@
 import React from "react";
 import "./Packages.css";
 import packagesData from "../../data/packages";
+import { useNavigate } from "react-router-dom";
 
 const Packages = () => {
+  const navigate = useNavigate();
+
+  const handleCta = () => {
+    navigate("/contact");
+  };
+
   return (
-    <div>
-      <div className="purchase_list">
+    <>
+      <div className="purchase_list" onClick={handleCta}>
         <div className="purchase-list-header-wrap">
           <h3>Explore Our Exciting Range Of Tailored Packages</h3>
           <p>
@@ -32,13 +39,13 @@ const Packages = () => {
                 ))}
               </div>
               <div className="purchase_list_cta">
-                <button>Purchase Now</button>
+                <button onClick={handleCta}>Purchase Now</button>
               </div>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
